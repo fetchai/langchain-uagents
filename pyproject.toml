@@ -1,0 +1,44 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "langchain-uagents"
+version = "0.1.0"
+description = "Bridge Langchain agents with uAgents and register them on Agentverse"
+authors = ["Abhi Gangani <abhi.gangani@fetch.ai>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/fetchai/langchain-uagents"
+documentation = "https://github.com/fetchai/langchain-uagents#readme"
+packages = [
+    {include = "langchain_uagents"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+langchain-core = "^0.3.48"
+langchain = "^0.3.21"
+uagents = "^0.22.0"
+pydantic = "^2.10.6"
+requests = "^2.32.3"
+python-dotenv = "^1.0.0"
+langchain-openai = "^0.2.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-socket = "^0.7.0"
+pytest-asyncio = "^0.26.0"
+langchain-tests = "0.3.16"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+asyncio_default_test_loop_scope = "function"
+filterwarnings = [
+    "ignore::DeprecationWarning:pydantic.*",
+    "ignore::DeprecationWarning:google.*"
+] 
