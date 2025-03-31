@@ -19,7 +19,7 @@ packages = [
 python = ">=3.10,<4.0"
 langchain-core = "^0.3.48"
 langchain = "^0.3.21"
-uagents = "^0.22.0"
+uagents = "^0.21.0"
 pydantic = "^2.10.6"
 requests = "^2.32.3"
 python-dotenv = "^1.0.0"
