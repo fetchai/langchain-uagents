@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "langchain-uagents"
-version = "0.1.0"
+version = "0.1.1"
 description = "Bridge Langchain agents with uAgents and register them on Agentverse"
 authors = ["Abhi Gangani <abhi.gangani@fetch.ai>"]
 license = "MIT"
